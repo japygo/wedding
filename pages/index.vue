@@ -31,10 +31,10 @@
     </div>
     <v-row no-gutters class="text-background">
       <v-col cols="6" data-aos="flip-left" data-aos-offset="200">
-        <v-img src="/imgs/3.jpg" />
+        <v-img :src="require('@/static/imgs/3.jpg')" />
       </v-col>
       <v-col cols="6" data-aos="flip-right" data-aos-offset="200">
-        <v-img src="/imgs/4.jpg" />
+        <v-img :src="require('@/static/imgs/4.jpg')" />
       </v-col>
     </v-row>
     <div class="text-background invite-name d-flex align-center justify-center">
@@ -79,7 +79,9 @@
     </div>
     <div class="default-background video d-flex flex-column align-center justify-center">
       <span data-aos="zoom-in-down" data-aos-offset="660">초대영상</span>
-      <video src="/mp4/welcome.mp4" width="100%" controls></video>
+      <video width="100%" controls>
+        <source :src="require('@/static/mp4/welcome.mp4')" type="video/mp4">
+      </video>
     </div>
     <div class="text-background map d-flex flex-column align-center justify-center">
       <span class="map-title" data-aos="zoom-in-down" data-aos-offset="770">오시는 길</span>
@@ -87,13 +89,13 @@
       <span class="map-address-sub" data-aos="fade-right" data-aos-offset="770">JK아트컨벤션 4층 아트리움홀</span>
       <div class="d-flex flex-row">
         <a href="https://naver.me/FHYucCYu">
-          <img src="/imgs/naver-map.png" alt="naver">
+          <img :src="require('@/static/imgs/naver-map.png')"  alt="naver" />
         </a>
         <a href="https://kko.to/Zy5MN-yVX9">
-          <img src="/imgs/kakao-map.png" alt="kakao">
+          <img :src="require('@/static/imgs/kakao-map.png')"  alt="kakao" />
         </a>
         <a href="https://goo.gl/maps/NFU28dVxGeJ5KMPs9">
-          <img src="/imgs/google-map.png" alt="google">
+          <img :src="require('@/static/imgs/google-map.png')"  alt="google" />
         </a>
       </div>
       <KakaoMap />

@@ -26,7 +26,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'https://japygo.github.io/wedding/og.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/wedding/favicon.ico' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Gamja+Flower:400|East+Sea+Dokdo:400|Nanum+Myeongjo|Nanum+Pen+Script:400|Great+Vibes:400|Do+Hyeon:400|Stylish:400&display=swap'

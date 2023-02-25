@@ -23,7 +23,7 @@ export default {
       { hid: 'og:title', property: 'og:title', content: '김현진♡정혜화' },
       { hid: 'og:description', property: 'og:description', content: '우리 결혼합니다.' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://japygo.github.io/wedding/og.png' }
+      { hid: 'og:image', property: 'og:image', content: 'https://japygo.github.io/wedding/og.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -89,5 +89,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  router: {
+    base: '/wedding/'
+  }
 }

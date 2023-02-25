@@ -18,3 +18,12 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+## Deploy
+
+```git
+git checkout -b gh-pages
+git add dist
+git commit -m "Deploy to GitHub Pages"
+git subtree push --prefix dist origin gh-pages
+```

@@ -226,7 +226,7 @@ body {
 }
 
 .text-background {
-  background-image: url("@/static/imgs/bg.png");
+  background-image: url("@/static/imgs/groovepaper.png");
   background-size: cover;
   background-color: #ebd3bb;
 }
@@ -258,7 +258,7 @@ body {
 }
 
 .default-background {
-  background-image: url("@/static/imgs/bg.png");
+  background-image: url("@/static/imgs/groovepaper.png");
   background-size: cover;
   background-color: #ffffff;
 }
@@ -283,7 +283,7 @@ body {
 }
 
 .calendar-background {
-  background-image: url("@/static/imgs/bg.png");
+  background-image: url("@/static/imgs/groovepaper.png");
   background-size: cover;
   background-color: #ffffff;
 }

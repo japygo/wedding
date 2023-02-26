@@ -10,7 +10,7 @@ export default {
     new daum.roughmap.Lander({
       "timestamp" : "1677310237057",
       "key" : "2duvb",
-      "mapWidth" : `${window.innerWidth}`,
+      "mapWidth" : `${window.innerWidth - 20}`,
       "mapHeight" : "360"
     }).render();
   },

@@ -30,25 +30,25 @@
       </div>
     </div>
     <v-row no-gutters class="text-background">
-      <v-col cols="6" data-aos="flip-left" data-aos-offset="200">
+      <v-col cols="6" data-aos="flip-left">
         <v-img :src="require('@/static/imgs/3.jpg')" eager />
       </v-col>
-      <v-col cols="6" data-aos="flip-right" data-aos-offset="200">
+      <v-col cols="6" data-aos="flip-right">
         <v-img :src="require('@/static/imgs/4.jpg')" eager />
       </v-col>
     </v-row>
     <div class="text-background invite-name d-flex align-center justify-center">
-      <div data-aos="fade-left" data-aos-offset="330">
+      <div data-aos="fade-left">
         김동용 · 오시영<span class="small align-self-end">의 장남</span>김현진
       </div>
     </div>
     <div class="text-background invite-name d-flex align-center justify-center">
-      <div data-aos="fade-right" data-aos-offset="330">
+      <div data-aos="fade-right">
         정일현 · 장영미<span class="small align-self-end">의 장녀</span>정혜화
       </div>
     </div>
     <div class="default-background date-message ">
-      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-in-up" data-aos-offset="330">
+      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-in-up">
         <span>결혼식</span>
         <div>
           2023년 4월 1일(토) 낮 12시<br>
@@ -63,7 +63,7 @@
       <div class="line"></div>
     </div>
     <div class="default-background date-message d-flex flex-column align-center justify-center">
-      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-out" data-aos-offset="400">
+      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-out">
         <span>피로연(신랑측)</span>
         <div>2023년 4월 2일(토) 낮 11시</div>
         <div>제주시 오션스위츠 호텔 2층</div>
@@ -74,19 +74,20 @@
       <div class="line"></div>
     </div>
     <div class="text-background gallery d-flex flex-column align-center justify-center">
-      <span data-aos="zoom-in-down" data-aos-offset="330">Gallery</span>
+      <span data-aos="zoom-in-down">Gallery</span>
       <WeddingGallery />
     </div>
     <div class="default-background video d-flex flex-column align-center justify-center">
-      <span data-aos="zoom-in-down" data-aos-offset="660">초대영상</span>
+      <span data-aos="zoom-in-down">초대영상</span>
       <video width="100%" controls>
         <source :src="require('@/static/mp4/welcome.mp4')" type="video/mp4">
       </video>
     </div>
     <div class="text-background map d-flex flex-column align-center justify-center">
-      <span class="map-title" data-aos="zoom-in-down" data-aos-offset="770">오시는 길</span>
-      <span class="map-address" data-aos="fade-left" data-aos-offset="770">서울특별시 영등포구 문래로 164 (문래동3가 55-16)</span>
-      <span class="map-address-sub" data-aos="fade-right" data-aos-offset="770">JK아트컨벤션 4층 아트리움홀</span>
+      <span class="map-title" data-aos="zoom-in-down">오시는 길</span>
+      <span class="map-address" data-aos="fade-left">서울특별시 영등포구 문래로 164</span>
+      <span class="map-address" data-aos="fade-left">(문래동3가 55-16)</span>
+      <span class="map-address-sub" data-aos="fade-right">JK아트컨벤션 4층 아트리움홀</span>
       <div class="d-flex flex-row">
         <a href="https://naver.me/FHYucCYu">
           <img :src="require('@/static/imgs/naver-map.png')"  alt="naver" />
@@ -99,7 +100,7 @@
         </a>
       </div>
       <KakaoMap />
-      <div class="map-description" data-aos="zoom-in-up" data-aos-offset="1200">
+      <div class="map-description" data-aos="zoom-in-up">
         ■ 지하철<br>
          ○ [2호선 문래역] 4번 출구 (뒷쪽) 셔틀버스 운행<br>
           - 도보 : 5번 출구에서 전방 직진 300M<br>
@@ -272,6 +273,9 @@ body {
   span {
     font-size: 30px;
   }
+  div:last-child {
+    font-size: 20px;
+  }
 }
 
 .default-line {
@@ -334,7 +338,7 @@ body {
 
   .map-description {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
   }
 }

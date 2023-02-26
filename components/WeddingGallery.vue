@@ -6,8 +6,10 @@
     <v-carousel-item
       v-for="(src, i) in images"
       :key="i"
-      :src="src"
-    ></v-carousel-item>
+      eager
+    >
+      <v-img :src="src" eager />
+    </v-carousel-item>
   </v-carousel>
 </template>
 

@@ -31,10 +31,10 @@
     </div>
     <v-row no-gutters class="text-background">
       <v-col cols="6" data-aos="flip-left" data-aos-offset="200">
-        <v-img :src="require('@/static/imgs/3.jpg')" />
+        <v-img :src="require('@/static/imgs/3.jpg')" eager />
       </v-col>
       <v-col cols="6" data-aos="flip-right" data-aos-offset="200">
-        <v-img :src="require('@/static/imgs/4.jpg')" />
+        <v-img :src="require('@/static/imgs/4.jpg')" eager />
       </v-col>
     </v-row>
     <div class="text-background invite-name d-flex align-center justify-center">
@@ -99,7 +99,7 @@
         </a>
       </div>
       <KakaoMap />
-      <div class="map-description" data-aos="zoom-in-up" data-aos-offset="1400">
+      <div class="map-description" data-aos="zoom-in-up" data-aos-offset="1200">
         ■ 지하철<br>
          ○ [2호선 문래역] 4번 출구 (뒷쪽) 셔틀버스 운행<br>
           - 도보 : 5번 출구에서 전방 직진 300M<br>

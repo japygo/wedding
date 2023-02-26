@@ -21,7 +21,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { hid: 'og:url', property: 'og:url', content: 'https://japygo.github.io/wedding' },
       { hid: 'og:title', property: 'og:title', content: '김현진♡정혜화' },
-      { hid: 'og:description', property: 'og:description', content: '우리 결혼합니다.' },
+      { hid: 'og:description', property: 'og:description', content: '결혼식에 초대합니다.' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://japygo.github.io/wedding/og.jpg' }
     ],

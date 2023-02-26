@@ -18,16 +18,14 @@
       </div>
     </div>
     <div class="text-background invite d-flex align-center justify-center">
-      <span data-aos="zoom-in-down">초대합니다</span>
+      <span>초대합니다</span>
     </div>
-    <div class="text-background invite-message d-flex align-center justify-center">
-      <div>
-        저희 두 사람이 사랑과 믿음으로<br>
-        한 가정을 이루게 되었습니다.<br>
-        바쁘시더라도 부디 오셔서 저희들의 앞날을<br>
-        축복해 주시고 격려해 주시면<br>
-        더없는 기쁨이 되겠습니다. <br>
-      </div>
+    <div class="text-background invite-message d-flex flex-column align-center justify-center">
+      <span>저희 두 사람이 사랑과 믿음으로</span>
+      <span>한 가정을 이루게 되었습니다.</span>
+      <span>바쁘시더라도 부디 오셔서 저희들의 앞날을</span>
+      <span>축복해 주시고 격려해 주시면</span>
+      <span>더없는 기쁨이 되겠습니다.</span>
     </div>
     <v-row no-gutters class="text-background">
       <v-col cols="6" data-aos="flip-left">
@@ -38,17 +36,17 @@
       </v-col>
     </v-row>
     <div class="text-background invite-name d-flex align-center justify-center">
-      <div data-aos="fade-left">
+      <div>
         김동용 · 오시영<span class="small align-self-end">의 장남</span>김현진
       </div>
     </div>
     <div class="text-background invite-name d-flex align-center justify-center">
-      <div data-aos="fade-right">
+      <div>
         정일현 · 장영미<span class="small align-self-end">의 장녀</span>정혜화
       </div>
     </div>
     <div class="default-background date-message ">
-      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-in-up">
+      <div class="d-flex flex-column align-center justify-center">
         <span>결혼식</span>
         <div>
           2023년 4월 1일(토) 낮 12시<br>
@@ -63,7 +61,7 @@
       <div class="line"></div>
     </div>
     <div class="default-background date-message d-flex flex-column align-center justify-center">
-      <div class="d-flex flex-column align-center justify-center" data-aos="zoom-out">
+      <div class="d-flex flex-column align-center justify-center">
         <span>피로연(신랑측)</span>
         <div>2023년 4월 2일(토) 낮 11시</div>
         <div>제주시 오션스위츠 호텔 2층</div>
@@ -74,20 +72,20 @@
       <div class="line"></div>
     </div>
     <div class="text-background gallery d-flex flex-column align-center justify-center">
-      <span data-aos="zoom-in-down">Gallery</span>
+      <span>Gallery</span>
       <WeddingGallery />
     </div>
     <div class="default-background video d-flex flex-column align-center justify-center">
-      <span data-aos="zoom-in-down">초대영상</span>
+      <span>초대영상</span>
       <video width="100%" controls>
         <source :src="require('@/static/mp4/welcome.mp4')" type="video/mp4">
       </video>
     </div>
     <div class="text-background map d-flex flex-column align-center justify-center">
-      <span class="map-title" data-aos="zoom-in-down">오시는 길</span>
-      <span class="map-address" data-aos="fade-left">서울특별시 영등포구 문래로 164</span>
-      <span class="map-address" data-aos="fade-left">(문래동3가 55-16)</span>
-      <span class="map-address-sub" data-aos="fade-right">JK아트컨벤션 4층 아트리움홀</span>
+      <span class="map-title">오시는 길</span>
+      <span class="map-address">서울특별시 영등포구 문래로 164</span>
+      <span class="map-address">(문래동3가 55-16)</span>
+      <span class="map-address-sub">JK아트컨벤션 4층 아트리움홀</span>
       <div class="d-flex flex-row">
         <a href="https://naver.me/FHYucCYu">
           <img :src="require('@/static/imgs/naver-map.png')"  alt="naver" />
@@ -100,12 +98,10 @@
         </a>
       </div>
       <KakaoMap />
-      <div class="map-description" data-aos="zoom-in-up">
+      <div class="map-description">
         ■ 지하철<br>
          ○ [2호선 문래역] 4번 출구 (뒷쪽) 셔틀버스 운행<br>
           - 도보 : 5번 출구에서 전방 직진 300M<br>
-         ○ [1호선 영등포역] 지하상가 지나 로터리 4번 출구 (영등포소방서 방면)<br>
-          - 도보 : 영등포로터리 지하쇼핑센터 4번 출구에서 전방 직진 300M<br>
         <br>
         ■ 버스<br>
            ○ 문래역 하차시<br>
@@ -231,27 +227,27 @@ body {
 .text-background {
   background-image: url("@/static/imgs/groovepaper.png");
   background-size: cover;
-  background-color: #ebd3bb;
+  background-color: #f3efec;
 }
 
 .invite {
   span {
-    font-family: "East Sea Dokdo", cursive;
+    font-family: 'Dongle', sans-serif;
     font-size: 30px;
-    margin: 50px 0;
+    margin: 30px 0;
   }
 }
 
 .invite-message {
-  font-family: "East Sea Dokdo", cursive;
+  font-family: 'Dongle', sans-serif;
   font-size: 25px;
   padding-bottom: 25px;
 }
 
 .invite-name {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: 'Dongle', sans-serif;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 25px;
   height: 50px;
   .small {
     font-size: 13px;
@@ -320,9 +316,9 @@ body {
   }
 
   .map-title {
-    font-family: "Nanum Pen Script", cursive;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 30px;
-    margin: 50px 0;
+    margin: 30px 0;
   }
 
   .map-address {
@@ -347,7 +343,7 @@ body {
   .panel-title {
     font-family: "Nanum Pen Script", cursive;
     font-size: 30px;
-    margin: 50px 0;
+    margin: 30px 0;
   }
 }
 

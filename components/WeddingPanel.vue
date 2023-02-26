@@ -1,39 +1,35 @@
 <template>
-  <div class="panel-content">
-    <v-btn
-      color="blue accent-2"
-      elevation="5"
-      @click="dialogSr = true"
-    >
-      신랑측 계좌번호 확인하기
-    </v-btn>
-    <v-btn
-      color="pink accent-1"
-      elevation="5"
-      @click="dialogSb = true"
-    >
-      신부측 계좌번호 확인하기
-    </v-btn>
+  <div class="panel-content d-flex flex-column align-center justify-center">
+    <div>
+      <span>신랑측 마음</span>
+      <v-btn
+        color="blue accent-2"
+        elevation="5"
+        @click="dialogSr = true"
+      >
+        계좌번호 보기
+      </v-btn>
+    </div>
+    <div>
+      <span>신부측 마음</span>
+      <v-btn
+        color="pink accent-1"
+        elevation="5"
+        @click="dialogSb = true"
+      >
+        계좌번호 보기
+      </v-btn>
+    </div>
     <v-dialog v-model="dialogSr" max-width="500">
       <v-card>
-        <v-card-title>신랑측</v-card-title>
+        <v-card-title>신랑측 계좌번호</v-card-title>
         <v-card-text>
-          <v-row>
-            <v-col>
-              <span>신랑</span>
-            </v-col>
-          </v-row>
           <v-row justify="space-between">
             <v-col cols="9">
-              <span>카카오뱅크 {{ account.sr }} 김현진</span>
+              <span>카카오 {{ account.sr }} 김현진</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.sr)">복사하기</v-btn>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <span>혼주</span>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sr)">복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
@@ -41,7 +37,7 @@
               <span>농협 {{ account.srf }} 김동용</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.srf)">복사하기</v-btn>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.srf)">복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
@@ -49,7 +45,7 @@
               <span>농협 {{ account.srm }} 오시영</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.srm)">복사하기</v-btn>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.srm)">복사</v-btn>
             </v-col>
           </v-row>
         </v-card-text>
@@ -57,24 +53,14 @@
     </v-dialog>
     <v-dialog v-model="dialogSb" max-width="500">
       <v-card>
-        <v-card-title>신부측</v-card-title>
+        <v-card-title>신부측 계좌번호</v-card-title>
         <v-card-text>
-          <v-row>
-            <v-col>
-              <span>신부</span>
-            </v-col>
-          </v-row>
           <v-row justify="space-between">
             <v-col cols="9">
-              <span>카카오뱅크 {{ account.sb }} 정혜화</span>
+              <span>카카오 {{ account.sb }} 정혜화</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.sb)">복사하기</v-btn>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <span>혼주</span>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sb)">복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
@@ -82,7 +68,7 @@
               <span>농협 {{ account.sbf }} 정일현</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.sbf)">복사하기</v-btn>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sbf)">복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
@@ -90,7 +76,7 @@
               <span>농협 {{ account.sbm }} 장영미</span>
             </v-col>
             <v-col cols="3">
-              <v-btn elevation="5" small text @click="handleCopy(account.sbm)">복사하기</v-btn>
+              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sbm)">복사</v-btn>
             </v-col>
           </v-row>
         </v-card-text>
@@ -151,5 +137,11 @@ export default {
 .panel-content {
   font-family: "Stylish", sans-serif;
   margin-bottom: 20px;
+  span {
+    margin-right: 10px;
+  }
+  div:first-child {
+    margin-bottom: 20px;
+  }
 }
 </style>

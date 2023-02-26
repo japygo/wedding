@@ -77,7 +77,7 @@
     </div>
     <div class="default-background video d-flex flex-column align-center justify-center">
       <span>초대영상</span>
-      <video width="100%" controls>
+      <video ref="video" width="100%" :poster="require('@/static/og.jpg')" controls>
         <source :src="require('@/static/mp4/welcome.mp4')" type="video/mp4">
       </video>
     </div>

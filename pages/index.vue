@@ -351,7 +351,7 @@ body {
 
 #gallery-photo {
   width: 90%;
-  height: 500px;
+  margin-bottom: 20px;
 }
 
 .gallery {
@@ -406,7 +406,7 @@ video {
 
   .map-description {
     font-family: "BMJUA", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     padding: 7%;
   }
 }
@@ -418,7 +418,5 @@ video {
     margin: 30px 0;
   }
 }
-
-
 
 </style>

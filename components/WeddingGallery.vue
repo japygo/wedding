@@ -1,7 +1,7 @@
 <template>
   <v-carousel
     hide-delimiters
-    height="500"
+    height="100%"
   >
     <v-carousel-item
       v-for="(src, i) in images"

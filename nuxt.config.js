@@ -28,13 +28,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/wedding/favicon.ico' },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Gamja+Flower:400|Nanum+Pen+Script:400|Great+Vibes:400|Do+Hyeon:400|Stylish:400|Dongle:400&display=swap'
-      },
-      {
         rel: 'preload',
-        as: 'style',
-        href: 'https://fonts.googleapis.com/css?family=Gamja+Flower:400|Nanum+Pen+Script:400|Great+Vibes:400|Do+Hyeon:400|Stylish:400|Dongle:400&display=swap'
+        as: 'font',
+        type: 'font/woff',
+        href: 'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff'
       }
     ],
     script: [

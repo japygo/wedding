@@ -1,6 +1,6 @@
 <template>
   <div class="calendar-wrap">
-    <h2 class="month-year">April 2023</h2>
+    <h2 class="month-year">4 월</h2>
     <table class="calendar">
       <thead>
       <tr>
@@ -124,7 +124,7 @@ export default {
 
 .day-title {
   width: 4em;
-  height: 4em;
+  height: 2em;
   vertical-align: top;
   font-weight: bold;
   font-size: 0.75em;

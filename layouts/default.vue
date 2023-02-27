@@ -15,11 +15,19 @@
 export default {
   name: 'DefaultLayout',
 }
+
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'BMJUA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .footer {
-  font-family: "Great Vibes", cursive;
+  font-family: "BMJUA", cursive;
   font-size: 14px;
 }
 </style>

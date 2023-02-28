@@ -4,8 +4,8 @@
       <Nuxt />
     </v-main>
     <v-footer padless>
-      <v-col class="text-right footer" cols="12">
-        © 2023 HyunJin, HyeHwa. All rights reserved.
+      <v-col class="footer" cols="12">
+        Copyright © 2023. HyunJin, HyeHwa, HyeBun. All rights reserved.
       </v-col>
     </v-footer>
   </v-app>
@@ -28,6 +28,9 @@ export default {
 
 .footer {
   font-family: "BMJUA", cursive;
-  font-size: 14px;
+  font-size: 12px;
+  background-image: url("@/static/imgs/contact_bg.jpg");
+  text-align: center !important;
+  margin: auto;
 }
 </style>

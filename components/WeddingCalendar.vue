@@ -94,9 +94,6 @@ export default {
   padding: 0.75em;
   font-size: 4vw;
   user-select: none;
-  box-shadow:
-    0 0.0625em 0.25em rgba(0,20,50,0.2),
-    0 0.5em 0.5em 0.125em rgba(0,20,50,0.1);
 }
 
 @media (min-width: 500px) {
@@ -115,15 +112,13 @@ export default {
 
 .calendar {
   table-layout: fixed;
-  width: 100%;
-  margin-bottom: 0.75em;
+  margin: auto;
   overflow: hidden;
   border-collapse: collapse;
   -webkit-tap-highlight-color: transparent;
 }
 
 .day-title {
-  width: 4em;
   height: 2em;
   vertical-align: top;
   font-weight: bold;
@@ -134,8 +129,8 @@ export default {
 
 .day {
   position: relative;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
 }
 
 .day:first-child,
@@ -149,8 +144,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
 }
 

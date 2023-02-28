@@ -1,93 +1,83 @@
 <template>
-  <div class="panel-content d-flex flex-column align-center justify-center">
-    <div>
-      <span>신랑측 마음</span>
-      <v-btn
-        color="blue accent-2"
-        elevation="5"
-        @click="dialogSr = true"
-      >
-        계좌번호 보기
-      </v-btn>
+  <div>
+    <div class="panel-content d-flex flex-column align-center justify-center">
+      <div>
+        <span>💍 신랑측</span>
+        <v-btn
+          color="#adbcf3"
+          elevation="5"
+          @click="dialogSr = true"
+        >
+          계좌번호 보기
+        </v-btn>
+      </div>
+      <div>
+        <span>💍 신부측</span>
+        <v-btn
+          color="#f1b9cc"
+          elevation="5"
+          @click="dialogSb = true"
+        >
+          계좌번호 보기
+        </v-btn>
+      </div>
+      <v-dialog v-model="dialogSr" max-width="500">
+        <v-card class="broom">
+          <v-card-title>💍 신랑측</v-card-title>
+          <v-card-text>
+            <v-row justify="space-between">
+              <span>혼주 [부] 김동용</span>
+              <span>농협 {{ account.srf }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.srf)">계좌번호 복사</v-btn>
+            </v-row>
+            <v-row justify="space-between">
+              <span>혼주 [모] 오시영</span>
+              <span>농협 {{ account.srm }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.srm)">계좌번호 복사</v-btn>
+            </v-row>
+            <v-row justify="space-between">
+              <span>신랑 김현진</span>
+              <span>카카오뱅크 {{ account.sr }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.sr)">계좌번호 복사</v-btn>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialogSb" max-width="500">
+        <v-card class="bride">
+          <v-card-title>💍 신부측</v-card-title>
+          <v-card-text>
+            <v-row justify="space-between">
+              <span>혼주 [부] 정일현</span>
+              <span>농협 {{ account.sbf }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.sbf)">계좌번호 복사</v-btn>
+            </v-row>
+            <v-row justify="space-between">
+              <span>혼주 [모] 장영미</span>
+              <span>농협 {{ account.sbm }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.sbm)">계좌번호 복사</v-btn>
+            </v-row>
+            <v-row justify="space-between">
+              <span>신랑 정혜화</span>
+              <span>카카오뱅크 {{ account.sb }}</span>
+            </v-row>
+            <v-row justify="center">
+              <v-btn elevation="5" small color="white" @click="handleCopy(account.sb)">계좌번호 복사</v-btn>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
     </div>
-    <div>
-      <span>신부측 마음</span>
-      <v-btn
-        color="pink accent-1"
-        elevation="5"
-        @click="dialogSb = true"
-      >
-        계좌번호 보기
-      </v-btn>
-    </div>
-    <v-dialog v-model="dialogSr" max-width="500">
-      <v-card>
-        <v-card-title>신랑측 계좌번호</v-card-title>
-        <v-card-text>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>혼주 김동용</p>
-              <span>농협<br>{{ account.srf }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.srf)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>혼주 오시영</p>
-              <span>농협<br>{{ account.srm }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.srm)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>신랑 김현진</p>
-              <span>카카오뱅크<br>{{ account.sr }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sr)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="dialogSb" max-width="500">
-      <v-card>
-        <v-card-title>신부측 계좌번호</v-card-title>
-        <v-card-text>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>혼주 정일현</p>
-              <span>농협<br>{{ account.sbf }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sbf)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>혼주 장영미</p>
-              <span>농협<br>{{ account.sbm }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sbm)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
-              <p>신부 정혜화</p>
-              <span>카카오뱅크<br>{{ account.sb }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sb)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </v-dialog>
     <v-snackbar
       v-model="snackbar"
       :timeout="1000"
@@ -150,18 +140,61 @@ export default {
 .panel-content {
   font-family: "BMJUA", sans-serif;
   margin-bottom: 20px;
+
   span {
-    font-size: 18px;
     margin-right: 10px;
   }
+
+  button {
+    span {
+      font-size: 18px;
+    }
+  }
+
   div:first-child {
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+  }
+
+  div:last-child {
+    margin-bottom: 10%;
   }
 }
 
-.col {
-  p, span {
-    font-size: 18px;
+.broom {
+  background: #f0f2f5 !important;
+
+  .row {
+    margin: 11px 0 0 0;
+  }
+
+  .row:nth-child(2n+1) {
+    border-top: 1px solid;
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .row:nth-child(2n) {
+    padding: 10px 0;
+  }
+}
+
+.bride {
+  background: #f7f3f4 !important;
+
+  .row {
+    margin: 11px 0 0 0;
+  }
+
+  .row:nth-child(2n+1) {
+    border-top: 1px solid;
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .row:nth-child(2n) {
+    padding: 10px 0;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="daumRoughmapContainer1677310237057" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+  <div id="daumRoughmapContainer1677310237057" ref="kakaoMap" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 </template>
 
 <script>
@@ -17,6 +17,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
 </style>

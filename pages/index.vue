@@ -69,7 +69,7 @@
       <WeddingGallery id="gallery-photo"/>
     </div>
     <div class="text-background video d-flex flex-column align-center justify-center">
-      <video ref="video" width="100%" :poster="require('@/static/og.jpg')" controls>
+      <video width="100%" :poster="require('@/static/og.jpg')" controls>
         <source :src="require('@/static/mp4/welcome.mp4')" type="video/mp4">
       </video>
     </div>
@@ -89,24 +89,24 @@
           <img :src="require('@/static/imgs/google-map.png')"  alt="google" />
         </a>
       </div>
-      <KakaoMap />
-        <div class="map-description">
-          ■ 지하철 - 셔틀 운행하는 문래역 권장<br>
-          &nbsp;&nbsp;&nbsp;○ [2호선 문래역] 4번 출구 (뒷쪽) 셔틀버스 운행<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 도보 : 5번 출구에서 전방 직진 300M<br>
-          <br>
-          ■ 버스<br>
-          &nbsp;&nbsp;&nbsp;○ 문래역 하차시<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(지선) 6211, 6625, 6650<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(광역) 2300, 2400. 2500<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(간선) 641<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(마을) 영등포 05<br>
-          &nbsp;&nbsp;&nbsp;○ 영등포역 하차시<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(마을) 영등포 05<br>
-          <br>
-          ■ 건물 내 주차<br>
-          &nbsp;&nbsp;&nbsp;1200대 동시 주차 가능
-        </div>
+      <KakaoMap ref="map" />
+      <div class="map-description">
+        ■ 지하철 - 셔틀 운행하는 문래역 권장<br>
+        &nbsp;&nbsp;&nbsp;○ [2호선 문래역] 4번 출구 (뒷쪽) 셔틀버스 운행<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 도보 : 5번 출구에서 전방 직진 300M<br>
+        <br>
+        ■ 버스<br>
+        &nbsp;&nbsp;&nbsp;○ 문래역 하차시<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(지선) 6211, 6625, 6650<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(광역) 2300, 2400. 2500<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(간선) 641<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(마을) 영등포 05<br>
+        &nbsp;&nbsp;&nbsp;○ 영등포역 하차시<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(마을) 영등포 05<br>
+        <br>
+        ■ 건물 내 주차<br>
+        &nbsp;&nbsp;&nbsp;1200대 동시 주차 가능
+      </div>
     </div>
     <div class="text-background panel d-flex flex-column align-center justify-center">
       <span class="panel-title">신랑 신부에게 마음 전하기</span>
@@ -118,7 +118,36 @@
 <script>
 
 export default {
-name: 'IndexPage'
+  name: 'IndexPage',
+  data() {
+    return {
+      scrollTimeout: null,
+      isScrolling: false
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('scroll', this.handleScroll)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      window.clearTimeout(this.scrollTimeout);
+      this.scrollTimeout = window.setTimeout(() => {
+        this.isScrolling = false;
+      }, 300);
+
+      if (!this.isScrolling) {
+        this.isScrolling = true;
+        this.$refs.map.$refs.kakaoMap.style.touchAction = 'none';
+      } else {
+        this.$refs.map.$refs.kakaoMap.style.touchAction = 'auto';
+      }
+    }
+  }
 }
 
 </script>

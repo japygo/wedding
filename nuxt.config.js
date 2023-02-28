@@ -26,13 +26,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'https://japygo.github.io/wedding/og.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/wedding/favicon.ico' },
-      {
-        rel: 'preload',
-        as: 'font',
-        type: 'font/woff',
-        href: 'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/wedding/favicon.ico' }
     ],
     script: [
       {

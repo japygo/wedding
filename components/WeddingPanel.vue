@@ -26,29 +26,29 @@
         <v-card-text>
           <v-row justify="space-between">
             <v-col cols="8">
-              <p>신랑 김현진</p>
-              <span>카카오뱅크 {{ account.sr }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sr)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
               <p>혼주 김동용</p>
-              <span>농협 {{ account.srf }}</span>
+              <span>농협<br>{{ account.srf }}</span>
             </v-col>
             <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.srf)">계좌 복사</v-btn>
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.srf)">계좌 복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
             <v-col cols="8">
               <p>혼주 오시영</p>
-              <span>농협 {{ account.srm }}</span>
+              <span>농협<br>{{ account.srm }}</span>
             </v-col>
             <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.srm)">계좌 복사</v-btn>
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.srm)">계좌 복사</v-btn>
+            </v-col>
+          </v-row>
+          <v-row justify="space-between">
+            <v-col cols="8">
+              <p>신랑 김현진</p>
+              <span>카카오뱅크<br>{{ account.sr }}</span>
+            </v-col>
+            <v-col cols="4">
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sr)">계좌 복사</v-btn>
             </v-col>
           </v-row>
         </v-card-text>
@@ -60,29 +60,29 @@
         <v-card-text>
           <v-row justify="space-between">
             <v-col cols="8">
-              <p>신부 정혜화</p>
-              <span>카카오뱅크 {{ account.sb }}</span>
-            </v-col>
-            <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sb)">계좌 복사</v-btn>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col cols="8">
               <p>혼주 정일현</p>
-              <span>농협 {{ account.sbf }}</span>
+              <span>농협<br>{{ account.sbf }}</span>
             </v-col>
             <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sbf)">계좌 복사</v-btn>
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sbf)">계좌 복사</v-btn>
             </v-col>
           </v-row>
           <v-row justify="space-between">
             <v-col cols="8">
               <p>혼주 장영미</p>
-              <span>농협 {{ account.sbm }}</span>
+              <span>농협<br>{{ account.sbm }}</span>
             </v-col>
             <v-col cols="4">
-              <v-btn elevation="5" small color="primary" @click="handleCopy(account.sbm)">계좌 복사</v-btn>
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sbm)">계좌 복사</v-btn>
+            </v-col>
+          </v-row>
+          <v-row justify="space-between">
+            <v-col cols="8">
+              <p>신부 정혜화</p>
+              <span>카카오뱅크<br>{{ account.sb }}</span>
+            </v-col>
+            <v-col cols="4">
+              <v-btn width="100%" min-width="80px" elevation="5" small color="primary" @click="handleCopy(account.sb)">계좌 복사</v-btn>
             </v-col>
           </v-row>
         </v-card-text>
@@ -151,10 +151,17 @@ export default {
   font-family: "BMJUA", sans-serif;
   margin-bottom: 20px;
   span {
+    font-size: 18px;
     margin-right: 10px;
   }
   div:first-child {
     margin-bottom: 20px;
+  }
+}
+
+.col {
+  p, span {
+    font-size: 18px;
   }
 }
 </style>

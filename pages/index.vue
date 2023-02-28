@@ -10,7 +10,7 @@
         <span id="wedding-day">wedding day
         </span>
         <p  id="name-title2" class="ww-wedding-date mt-5 ww-title" data-aos="zoom-in-down" data-aos-offset="10">
-          2023년 4월 1일 토요일 오후 12시<br>
+          2023년 4월 1일 토요일 낮 12시<br>
           JK아트컨벤션 4층 아트리움홀
         </p>
       </div>
@@ -46,7 +46,7 @@
     <div class="default-background date-message d-flex flex-column align-center justify-center">
       <div class="d-flex flex-column align-center justify-center">
         <span>결혼식</span>
-        <div>2023년 4월 1일(토) 오후 12시<br> JK아트컨벤션 4층 / 아트리움홀</div>
+        <div>2023년 4월 1일(토) 낮 12시<br> JK아트컨벤션 4층 / 아트리움홀</div>
       </div>
     </div>
     <div class="calendar-background d-flex align-center justify-center">
@@ -57,8 +57,8 @@
     </div>
     <div class="default-background date-message d-flex flex-column align-center justify-center">
       <div class="d-flex flex-column align-center justify-center">
-        <span>피로연(신랑측)</span>
-        <div>2023년 4월 2일(일) 낮 11시<br>제주시 오션스위츠 호텔 2층 <br>(제주시 삼도이동 탑동해안로 74, 이마트 동쪽)</div>
+        <span>제주 피로연(신랑측)</span>
+        <div>2023년 4월 2일(일) 11시 ~ 17시<br>제주시 오션스위츠 호텔 2층 <br>(제주시 삼도이동 탑동해안로 74, 이마트 동쪽)</div>
       </div>
     </div>
     <div class="default-background default-line d-flex align-center justify-center">

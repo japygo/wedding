@@ -385,7 +385,7 @@ body {
 .invite {
   span {
     font-family: "BMJUA", sans-serif;
-    font-size: 30px;
+    font-size: 6px;
     margin: 10% 0 5%;
   }
   p {
@@ -516,15 +516,15 @@ video {
 
 .map {
   img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin: 5px;
     vertical-align: middle;
   }
 
   .map-title {
     font-family: "BMJUA", sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     margin: 30px 0 0 0;
   }
 

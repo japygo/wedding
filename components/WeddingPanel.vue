@@ -68,7 +68,7 @@
               <v-btn elevation="5" small color="white" @click="handleCopy(account.sbm)">계좌번호 복사</v-btn>
             </v-row>
             <v-row justify="space-between">
-              <span>신랑 정혜화</span>
+              <span>신부 정혜화</span>
               <span>카카오뱅크 {{ account.sb }}</span>
             </v-row>
             <v-row justify="center">

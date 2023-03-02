@@ -8,7 +8,7 @@
           정혜화
         </p>
         <span id="wedding-day">
-          D-{{ dday }}
+          {{ dDay }}
           <svg viewBox="0 0 32 29.6" class="heart"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"></path></svg>
         </span>
         <p id="name-title2" class="ww-wedding-date mt-5 ww-title" data-aos="zoom-in-down" data-aos-offset="10">
@@ -171,16 +171,14 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      dday: 0,
+      dDay: 0,
       location : '서울특별시 영등포구 문래로 164(문래동 3가 55-16) JK아트컨벤션',
       scrollTimeout: null,
       snackbar: false
     }
   },
   created() {
-    const now = dayjs()
-    const weddingDay = dayjs('2023-04-01')
-    this.dday = Math.floor(weddingDay.diff(now, "day", true))
+    this.setDDay()
   },
   mounted() {
     this.$nextTick(() => {
@@ -191,6 +189,18 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    setDDay() {
+      const now = dayjs()
+      const weddingDay = dayjs('2023-04-01')
+      const diff = Math.floor(now.diff(weddingDay, "day", true))
+      if (diff === 0) {
+        this.dDay = `D-DAY`
+      } else if (diff > 0) {
+        this.dDay = `D+${diff}`
+      } else {
+        this.dDay = `D${diff}`
+      }
+    },
     handleScroll() {
       window.clearTimeout(this.scrollTimeout);
       this.scrollTimeout = window.setTimeout(() => {

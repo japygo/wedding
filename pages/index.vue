@@ -268,7 +268,7 @@ body {
 }
 
 .ww-home-page {
-  background: url("@/static/imgs/2.jpg") no-repeat 70% 68%;
+  background: url("@/static/imgs/main.jpg") no-repeat 70% 68%;
   background-size: cover;
   height: 58vh;
   min-height: 480px;

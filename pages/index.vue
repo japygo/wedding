@@ -18,9 +18,8 @@
       </div>
     </div>
     <div id="home" class="ww-home-page">
-      <span id="wedding-day2">
-              04.01
-      </span>
+      <span id="wedding-day2">04.01</span>
+      <img :src="require('@/static/imgs/name.png')" alt="name" />
     </div>
     <div class="title-background invite align-center justify-center">
       <span>- INVITE YOU -</span>
@@ -71,7 +70,7 @@
       <div class="line"></div>
     </div>
     <div class="text-background gallery d-flex flex-column align-center justify-center">
-      <span class="wedding-date">-Wedding Gallery-</span>
+      <span class="wedding-date">- Wedding Gallery -</span>
       <WeddingGallery id="gallery-photo"/>
     </div>
     <div class="text-background video d-flex flex-column align-center justify-center">
@@ -268,12 +267,19 @@ body {
 }
 
 .ww-home-page {
-  background: url("@/static/imgs/main.jpg") no-repeat 70% 68%;
+  background: url("@/static/imgs/2.jpg") no-repeat 70% 68%;
   background-size: cover;
   height: 58vh;
   min-height: 480px;
   max-height: 1080px;
   margin: 1vh 3vh 3vh 3vh;
+  position: relative;
+  img {
+    width: 12vw;
+    position: absolute;
+    bottom: 4vh;
+    left: 7vw;
+  }
 }
 .ww-home-page .ww-wedding-announcement {
   width: 100%;

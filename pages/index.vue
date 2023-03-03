@@ -71,7 +71,7 @@
       <div class="line"></div>
     </div>
     <div class="text-background gallery d-flex flex-column align-center justify-center">
-      <span class="wedding-date">-Wedding Gellery-</span>
+      <span class="wedding-date">-Wedding Gallery-</span>
       <WeddingGallery id="gallery-photo"/>
     </div>
     <div class="text-background video d-flex flex-column align-center justify-center">

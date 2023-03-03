@@ -275,10 +275,10 @@ body {
   margin: 1vh 3vh 3vh 3vh;
   position: relative;
   img {
-    width: 12vw;
+    width: 25vw;
     position: absolute;
-    bottom: 4vh;
-    left: 7vw;
+    bottom: 3vh;
+    left: 4vw;
   }
 }
 .ww-home-page .ww-wedding-announcement {
